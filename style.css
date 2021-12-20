@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aqua;
+    overflow: auto;
+}
+
+.clock {
+    background: #fff;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border: 2px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    z-index: 15;
+    border-radius: 50%;
+    top: 50%;
+    padding: 7px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.number1 {
+    --rotation: 30deg;
+}
+
+.number2 {
+    transform: rotate(60deg);
+}
+
+.number3 {
+    transform: rotate(90deg);
+}
+
+.number4 {
+    transform: rotate(120deg);
+}
+
+.number5 {
+    transform: rotate(150deg);
+}
+
+.number6 {
+    transform: rotate(180deg);
+}
+
+.number7 {
+    transform: rotate(210deg);
+}
+
+.number8 {
+    transform: rotate(240deg);
+}
+
+.number9 {
+    transform: rotate(270deg);
+}
+
+.number10 {
+    transform: rotate(300deg);
+}
+
+.number11 {
+    transform: rotate(330deg);
+}
+
+.number12 {
+    transform: rotate(360deg);
+}
+
+.stick {
+    --rotation: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 10px;
+    height: 40%;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.second {
+    width: 1px;
+    height: 45%;
+    background-color: red;
+}
+
+.minute {
+    width: 5px;
+    height: 40%;
+    background-color: black;
+}
+
+.hour {
+    width: 7px;
+    height: 35%;
+    background-color: black;
+}
